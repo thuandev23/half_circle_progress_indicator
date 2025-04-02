@@ -176,8 +176,9 @@ class _FlipColorWidgetState extends State<FlipColorWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (_colorWhenAnimationEnds != widget.color)
+    if (_colorWhenAnimationEnds != widget.color) {
       initAnimation(); // Khởi động lại hoạt ảnh nếu màu sắc thay đổi
+    }
 
     return Transform.rotate(
       angle: _rotationAngle, // Quay đối tượng để tạo hiệu ứng lật
